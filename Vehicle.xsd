@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:target="http://www.example.com/Vehicle" targetNamespace="http://www.example.com/Vehicle" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<complexType name="DriveTrainType">
+		<sequence>
+			<element name="Engine" type="string"/>
+			<element name="Transmission" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="VehicleType">
+		<sequence>
+			<element name="Body" type="string"/>
+			<element name="DriveTrain" type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="AutomobileType">
+		<complexContent>
+			<extension base="target:VehicleType">
+				<sequence>
+					<element name="Trunk" type="string"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SedanType">
+		<complexContent>
+			<extension base="target:AutomobileType"/>
+		</complexContent>
+	</complexType>
+	<complexType name="ConvertibleType">
+		<complexContent>
+			<extension base="target:AutomobileType">
+				<sequence>
+					<element name="OperatingRoof" type="string"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TruckTupe">
+		<complexContent>
+			<extension base="target:VehicleType">
+				<sequence>
+					<element name="Compartment" type="string"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="Vehicle">
+		<complexType>
+			<sequence>
+				<element name="Automobile" type="target:AutomobileType"/>
+				<element name="Sedan" type="target:SedanType"/>
+				<element name="Convertible" type="target:ConvertibleType"/>
+				<element name="Truck" type="target:TruckTupe"/>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="Vehicles">
+		<complexType>
+			<sequence>
+				<element ref="target:Vehicle" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

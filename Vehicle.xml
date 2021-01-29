@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Vehicles xmlns="http://www.example.com/Vehicle" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.example.com/Vehicle ../../../../Desktop/20171688-%EC%9E%84%EC%9D%B4%ED%98%84/Vehicle.xsd">
+	<Vehicle>
+		<Automobile>
+			<Body>ehyeonAutomobile</Body>
+			<DriveTrain>ehyeonAutomobileDriveTrain</DriveTrain>
+			<Trunk>ehyeonAutomobileTrunk</Trunk>
+		</Automobile>
+		<Sedan>
+			<Body>ehyeonSedan</Body>
+			<DriveTrain>ehyeonSedanDriveTrain</DriveTrain>
+			<Trunk>ehyeonSedanTrunk</Trunk>
+		</Sedan>
+		<Convertible>
+			<Body>ehyeonConvertible</Body>
+			<DriveTrain>ehyeonConvertibleDriveTrain</DriveTrain>
+			<Trunk>ehyeonConvertibleTrunk</Trunk>
+			<OperatingRoof>ehyeonConvertibleOperatingRoof</OperatingRoof>
+		</Convertible>
+		<Truck>
+			<Body>ehyeonTruck</Body>
+			<DriveTrain>ehyeonTruckDriveTrain</DriveTrain>
+			<Compartment>ehyeonTruckCompartment</Compartment>
+		</Truck>
+	</Vehicle>
+</Vehicles>
